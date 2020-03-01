@@ -347,3 +347,9 @@ template {
 [hidden] {
   display: none;
 }
+
+
+ul li,
+ol li {
+  list-style: none;
+}

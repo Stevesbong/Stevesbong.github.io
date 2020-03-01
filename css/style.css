@@ -1,10 +1,19 @@
+:root {
+  --main-bg-color: #E6E0E0;
+}
+
+* {
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
 /* ================================= 
   Web Fonts
 ==================================== */
 
 body {
     font-family: 'Simonetta', Arial, sans-serif;
-    background-color: rgb(230, 224, 224);
+    background-color: var(--main-bg-color);
 }
 
 
@@ -12,33 +21,26 @@ body {
   Base Element Styles
 ==================================== */
 
-* {
-    box-sizing: border-box;
-    /* border: 1px solid red; */
-}
 
-/* ---- header ---- */
+    /* ---- header ---- */
 
-.img-header {
-  margin: 0;
-  float: left;
-}
-.img-header img {
-  width: 80px;
-  height: 80px;
-  float: left;
-  border-radius: 50%;
-}
-.img-header h1 {
-  float: right;
-}
-.main-nav {
-  float: right;
-}
+header h1,
 .main-nav li {
-  display: inline-block;
-  padding: 0 15px;
+  text-align: center;
 }
+
+.main-nav li {
+  padding: 15px 0;
+  font-size: 1.5em;
+}
+
+
+
+
+    /* ---- main ---- */
+
+
+    /* ---- footer ---- */
 
 
 /* ================================= 
