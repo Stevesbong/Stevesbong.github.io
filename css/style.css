@@ -24,17 +24,24 @@ body {
 
     /* ---- header ---- */
 
-header h1,
+/* header h1,
 .main-nav li {
   text-align: center;
+} */
+
+h1::after {
+  /* content: "\039e"; */
 }
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
 
 .main-nav li {
   padding: 15px 0;
   font-size: 1.5em;
 }
-
-
 
 
     /* ---- main ---- */
@@ -50,11 +57,11 @@ header h1,
 
 
 
-.clearfix::after {
+/* .clearfix::after {
   content: "";
   display: table;
   clear: both;
-}
+} */
 
 /* ================================= 
   Media Queries
