@@ -13,7 +13,8 @@
 
 body {
     font-family: 'Simonetta', Arial, sans-serif;
-    background-color: var(--main-bg-color);
+    /* background: url("/img/programingcode.png"); */
+    color: rgb(223, 223, 223)
 }
 
 
@@ -24,17 +25,69 @@ body {
 
     /* ---- header ---- */
 
-/* header h1,
-.main-nav li {
-  text-align: center;
-} */
-
-h1::after {
-  /* content: "\039e"; */
-}
-header {
+.main-header {
   display: flex;
   justify-content: space-between;
+}
+
+.header-h1 {
+  flex:3;
+  text-align: center;
+}
+
+.main-nav {
+  flex:1;
+  text-align: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: auto;
+}
+
+.dropbtn {
+  background-color: rgb(7, 107, 112);
+  padding: 3px 15px;
+  font-size: 2em;
+  border: none;
+  opacity: 0.8;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  background-color: #f1f1f1;;
+  z-index: 1;
+  width:100%;
+  background-color: transparent; 
+}
+@keyframes out {
+  from {top: 0;}
+  to {top: 40px;}
+}
+
+.dropdown-content li {
+  color: black;
+  display: block;
+  margin: 5px 0;
+  border-radius: 20px;
+  background: 
+        linear-gradient(0deg, rgb(17, 153, 160) 4%, rgb(102, 102, 101) 82%),
+        linear-gradient(0deg, rgb(21, 172, 180), transparent);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  animation-name: out;
+  animation-duration: 1.3s;
+}
+
+.dropbtn::before {
+  content: "\039e";
+  color: #ddd;
 }
 
 
@@ -54,14 +107,9 @@ header {
   Base Layout Styles
 ==================================== */
 
-
-
-
-/* .clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-} */
+a {
+  text-decoration: none;
+}
 
 /* ================================= 
   Media Queries
