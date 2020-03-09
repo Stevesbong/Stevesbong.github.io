@@ -13,7 +13,7 @@
 
 body {
     font-family: 'Merriweather', Arial, sans-serif;
-    background: url("/img/photo4.jpg");
+    /* background: url("/img/photo4.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
     color: rgb(211, 207, 207);
@@ -86,11 +86,17 @@ a {
   min-height: 200px;
   padding: 80px 20px;
 }
-.about h1 {
-  font-size: 2.3em;
-}
 .profileimg img {
   width:100px;
+}
+.about h1 {
+  font-size: 2.2em;
+}
+.about > p {
+  line-height: 1.6;
+}
+.about .name {
+  font-size: 1.5em;
 }
 
 
@@ -98,6 +104,22 @@ a {
 
 .main-content {
   flex: 1;
+  text-align: center;
+}
+.main-content h1 {
+  margin-bottom: 50px;
+}
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.skills img {
+  width: 30%;
+}
+
+.projects {
+  margin-top: 50px;
 }
 
 
