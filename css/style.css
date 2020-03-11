@@ -109,14 +109,24 @@ a {
 .main-content h1 {
   margin-bottom: 50px;
 }
+
+
+
+    /* ---- Skills ---- */
+
 .skills {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .skills img {
-  width: 30%;
+  width: 25%;
+  margin: 10px;
 }
+
+
+    /* ---- Projects ---- */
 
 .projects {
   margin-top: 50px;
@@ -189,6 +199,7 @@ a {
   justify-content: center;
   margin: 0 20px;
 }
+
 .copyright {
   align-self: center;
   flex: 2;
@@ -209,5 +220,9 @@ a {
   }
   .header-h1 {
     display: none;
+  }
+  .skills img {
+    width: 150px;
+    margin: 20px;
   }
 }
