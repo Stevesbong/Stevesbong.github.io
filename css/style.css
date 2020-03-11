@@ -18,7 +18,7 @@ body {
     background-size: cover;
     color: rgb(211, 207, 207);
     min-height: 100vh;
-    max-width: 1400px;
+    max-width: 1600px;
     line-height: 1.3;
 
     display: flex;
@@ -125,6 +125,18 @@ a {
   margin: 10px;
 }
 
+.skills .react {
+  animation: 4s linear 0s infinite normal none running rotateImg;
+}
+@keyframes rotateImg {
+  0%{
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
     /* ---- Projects ---- */
 
@@ -213,16 +225,52 @@ a {
 
 
 @media (min-width: 768px) {
+
+  body {
+    font-size: 1.5rem;
+  }
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
   .header-h1-second {
     display: block;
-    flex: 3;
     text-align: center;
   }
-  .header-h1 {
+  .header-h1,
+  .dropbtn {
     display: none;
+  }
+  .main-nav {
+    flex:none;
+    align-self: center;
+  }
+  .dropdown {
+    margin: 0;
+  }
+  .dropdown-content,
+  .dropdown {
+    display:inline;
+    position: static;
+  }
+  .dropdown:hover .dropdown-content {
+    animation: none;
+  }
+  .dropdown-content li {
+    display: inline;
+    background: none;
+    padding: 0 10px;
   }
   .skills img {
     width: 150px;
     margin: 20px;
+  }
+  .mobile {
+    margin: 40px;
+    text-align: center;
+  }
+  .mobile ul {
+    display: none;
   }
 }
