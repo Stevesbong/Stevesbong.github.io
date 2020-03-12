@@ -10,12 +10,15 @@
 /* ================================= 
   Web Fonts
 ==================================== */
+html {
+  background: url(/img/backgroundimg2.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  /* overflow: hidden; */
+}
 
 body {
     font-family: 'Merriweather', Arial, sans-serif;
-    /* background: url("/img/photo4.jpg"); */
-    background-repeat: no-repeat;
-    background-size: cover;
     color: rgb(211, 207, 207);
     min-height: 100vh;
     max-width: 1600px;
@@ -84,10 +87,10 @@ a {
 .about {
   text-align: center;
   min-height: 200px;
-  padding: 80px 20px;
+  padding: 40px 20px;
 }
 .profileimg img {
-  width:100px;
+  width:200px;
 }
 .about h1 {
   font-size: 2.2em;
@@ -125,6 +128,12 @@ a {
   margin: 10px;
 }
 
+.skills .express {
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
 .skills .react {
   animation: 4s linear 0s infinite normal none running rotateImg;
 }
@@ -158,6 +167,7 @@ a {
 .main-header {
   display: flex;
   justify-content: space-between;
+  background-color: #36486b;
 }
 
 .header-h1 {
@@ -229,38 +239,74 @@ a {
   body {
     font-size: 1.5rem;
   }
+
+
+  /* -------- Main-Header -------- */
+
   .main-header {
     display: flex;
     justify-content: space-between;
     padding: 0 30px;
   }
+
   .header-h1-second {
     display: block;
     text-align: center;
   }
+
   .header-h1,
   .dropbtn {
     display: none;
   }
+  /* -------- Main-Header > Nav bar --------- */
+
   .main-nav {
     flex:none;
     align-self: center;
   }
+
   .dropdown {
     margin: 0;
   }
+  
   .dropdown-content,
   .dropdown {
     display:inline;
     position: static;
   }
+
   .dropdown:hover .dropdown-content {
     animation: none;
   }
+
   .dropdown-content li {
     display: inline;
     background: none;
     padding: 0 10px;
+  }
+
+  a:link {
+    color:red;
+  }
+  a:visited {
+    color: #b7d7e8;
+  }
+  .main-nav ul li a:hover {
+    color: #77a8a8;
+  }
+
+  /* -------- About -------- */
+
+  .about {
+    padding: 0 150px;
+  }
+  .profileimg {
+    display: none;
+  }
+
+  .skills {
+    background-color: aliceblue;
+    padding: 0 200px;
   }
   .skills img {
     width: 150px;
