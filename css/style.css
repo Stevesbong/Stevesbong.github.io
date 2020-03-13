@@ -103,24 +103,22 @@ a {
 }
 
 
-    /* ---- main ---- */
+    /* ---- Skills ---- */
 
-.main-content {
+.skills-heading {
   flex: 1;
   text-align: center;
+  background-color: white;
 }
-.main-content h1 {
+.skills-heading h1 {
   margin-bottom: 50px;
 }
-
-
-
-    /* ---- Skills ---- */
 
 .skills {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  
 }
 
 .skills img {
@@ -129,7 +127,6 @@ a {
 }
 
 .skills .express {
-  background-color: white;
   border-radius: 50%;
   opacity: 0.4;
 }
@@ -208,7 +205,6 @@ a {
 
 
 
-        /* ---- Main-content ---- */
 
 
 
@@ -305,7 +301,8 @@ a {
   }
 
   .skills {
-    background-color: aliceblue;
+    background: linear-gradient(0deg, #fff, transparent),
+                linear-gradient(0deg, rgb(241, 246, 250), rgb(169, 255, 241), #fff);
     padding: 0 200px;
   }
   .skills img {
