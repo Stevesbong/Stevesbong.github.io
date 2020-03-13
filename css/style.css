@@ -124,6 +124,8 @@ a {
 .skills img {
   width: 25%;
   margin: 10px;
+  transition-property: width;
+  transition-duration: .6s;
 }
 
 .skills .express {
@@ -200,10 +202,31 @@ a {
   animation-name: out;
   animation-duration: 1.3s;
 }
+.main-nav ul li a {
+  transition-property: color, font-size;
+  transition-duration: .5s;
+  transition-timing-function: ease-in, ease-out;
+}
+
+a:link {
+  color:red;
+}
+a:visited {
+  color: #b7d7e8;
+}
+.main-nav ul li a:hover {
+  font-size:1.2em;
+  color: #77a8a8;
+}
+/* a:active {
+
+} */
     
         /* ---- Header, Navigation End ---- */
 
-
+.skills img:hover {
+  width: 16%;
+}
 
 
 
@@ -281,20 +304,10 @@ a {
     padding: 0 10px;
   }
 
-  a:link {
-    color:red;
-  }
-  a:visited {
-    color: #b7d7e8;
-  }
-  .main-nav ul li a:hover {
-    color: #77a8a8;
-  }
-
   /* -------- About -------- */
 
   .about {
-    padding: 0 150px;
+    padding: 150px;
   }
   .profileimg {
     display: none;
