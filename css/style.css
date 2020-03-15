@@ -89,8 +89,21 @@ a {
   min-height: 200px;
   padding: 40px 20px;
 }
+.about .bio {
+  transition: opacity .5s ease-in-out, border-radius 1s;
+}
+.bio p {
+  background: linear-gradient(to bottom,
+  rgba(255, 255, 255, 0) 0%,
+  rgba(0, 0, 0, 0.7) 30%,
+  rgba(0, 0, 0, 0.8) 70%,
+  rgba(255, 255, 255, 0) 100%);
+  border-radius: 60px;
+  padding: 10px;
+}
 .profileimg img {
   width:200px;
+  opacity: 0.8;
 }
 .about h1 {
   font-size: 2.2em;
@@ -172,6 +185,11 @@ a {
 .header-h1 {
   flex: 3;
   text-align: center;
+  transition: transform .5s;
+}
+.header-h1:hover {
+  transform: rotate(10deg);
+  transform-origin: top left;
 }
 
     /* ---- Navigation ---- */
@@ -312,6 +330,22 @@ a:visited {
 
   .about {
     padding: 150px;
+  }
+  .about .bio {
+    opacity: 0.3;
+  }
+  .bio p {
+    background: none;
+  }
+  .about:hover .bio {
+    background: linear-gradient(to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.7) 30%,
+    rgba(0, 0, 0, 0.8) 70%,
+    rgba(255, 255, 255, 0) 100%);
+    border-radius: 100px;
+    background-position: 0 0;
+    opacity: 1;
   }
   .profileimg {
     display: none;
