@@ -34,7 +34,10 @@ body {
 ==================================== */
 
     /* ---- Header ---- */
-
+ul,
+.dropdown-content {
+  padding:0
+}
 .header-h1-second,
 .tablet-desktop {
   display: none;
@@ -60,16 +63,11 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  padding: 0;
   margin: 0;
   background-color: #f1f1f1;;
   z-index: 1;
   width:100%;
   background-color: transparent; 
-}
-@keyframes out {
-  from {top: 0;}
-  to {top: 40px;}
 }
 
 a {
@@ -123,9 +121,6 @@ a {
   text-align: center;
   background-color: white;
 }
-.skills-heading h1 {
-  margin-bottom: 50px;
-}
 
 .skills {
   display: flex;
@@ -161,13 +156,14 @@ a {
 
     /* ---- Projects ---- */
 
-.projects {
-  margin-top: 50px;
+.skills-heading h1,
+.projects,
+.contact {
+  margin: 100px 0;
 }
 
 
 
-    /* ---- footer ---- */
 
 
 /* ================================= 
@@ -220,6 +216,11 @@ a {
   animation-name: out;
   animation-duration: 1.3s;
 }
+@keyframes out {
+  from {top: 0;}
+  to {top: 40px;}
+}
+
 .main-nav ul li a {
   transition-property: color, transform;
   transition-duration: .5s;
@@ -233,10 +234,7 @@ a:link {
 a:visited {
   color: #b7d7e8;
 }
-.main-nav ul li a:hover {
-  transform: scale(1.2) rotate(1turn);
-  color: #77a8a8;
-}
+
 /* a:active {
 
 } */
@@ -249,6 +247,36 @@ a:visited {
 .skills img:hover:nth-of-type(2n +1) {
   transform: scale(1.2) rotate(-20deg);
 }
+
+
+
+/* ---- Contact ---- */
+
+.contact ul li{
+  display: inline-block;
+  padding: 0 15px;
+  margin: 0 10px;
+}
+.contact ul li a {
+  display: block;
+  padding: 5px 15px;
+  transition: transform .5s;
+}
+.contact ul li a:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+.contact .contact-linkedin {
+  background: #3B5998;
+}
+.contact .contact-github {
+  background-color: black;
+}
+.contact .contact-email {
+  background-color: rgb(57, 112, 112);
+}
+
 
 
 
@@ -304,6 +332,11 @@ a:visited {
   .main-nav {
     flex:none;
     align-self: center;
+  }
+
+  .main-nav ul li a:hover {
+    transform: scale(1.2) rotate(1turn);
+    color: #77a8a8;
   }
 
   .dropdown {
