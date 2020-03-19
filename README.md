@@ -1,9 +1,12 @@
 # [Portfolio Website](https://stevesbong.github.io/)
 
-Website preview: ![alt text](https://github.com/Stevesbong/Stevesbong.github.io/tree/master/img/portfolioscreenshot.png)
+Website preview:
+<img src="https://github.com/Stevesbong/Stevesbong.github.io/blob/master/img/portfolioscreenshot.png" width="600" height="700">
+
+
 ### Description
 
-Portfolio website 
+Created a Portfolio Website with HTML and CSS for resume.
 
 
 
