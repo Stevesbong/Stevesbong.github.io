@@ -7,14 +7,10 @@
     /* border: 1px solid red; */
 }
 
-/* ================================= 
-  Web Fonts
-==================================== */
 html {
   background: url(/img/backgroundimg2.jpg) no-repeat center center fixed;
   background-size: cover;
   height: 100%;
-  /* overflow: hidden; */
 }
 
 body {
@@ -31,6 +27,7 @@ body {
 /* ================================= 
   Base Element Styles
 ==================================== */
+
 
     /* ---- Header ---- */
 ul,
@@ -73,22 +70,28 @@ a {
   text-decoration: none;
 }
 
-    /* ---- Header End ---- */
 
     /* ---- About Section ---- */
-
-
-    /* where the class declaration attached each other,
-    meaning that is not finished yet. */
 
 .about {
   text-align: center;
   min-height: 200px;
   padding: 40px 20px;
 }
+
 .about .bio {
   transition: opacity .5s ease-in-out, border-radius 1s;
 }
+
+.profileimg img {
+  width:200px;
+  opacity: 0.8;
+}
+
+.about h1 {
+  font-size: 2.2em;
+}
+
 .bio p {
   background: linear-gradient(to bottom,
   rgba(255, 255, 255, 0) 0%,
@@ -98,16 +101,11 @@ a {
   border-radius: 60px;
   padding: 10px;
 }
-.profileimg img {
-  width:200px;
-  opacity: 0.8;
-}
-.about h1 {
-  font-size: 2.2em;
-}
+
 .about > p {
   line-height: 1.6;
 }
+
 .about .name {
   font-size: 1.5em;
 }
@@ -125,31 +123,6 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  
-}
-
-.skills img {
-  width: 25%;
-  margin: 10px;
-  transition-property: transform;
-  transition-duration: .6s;
-}
-
-.skills .express {
-  border-radius: 50%;
-  opacity: 0.4;
-}
-
-.skills .react {
-  animation: 4s linear 0s infinite normal none running rotateImg;
-}
-@keyframes rotateImg {
-  0%{
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 
@@ -167,9 +140,6 @@ footer {
   background-color: #E6E0E0;
   color: black;
 }
-
-
-
 
 
 /* ================================= 
@@ -194,6 +164,7 @@ footer {
   transform-origin: top left;
 }
 
+
     /* ---- Navigation ---- */
 
 .main-nav {
@@ -208,15 +179,12 @@ footer {
 }
 
 .dropdown-content li {
-  color: black;
   display: block;
   margin: 5px 0;
   border-radius: 20px;
   background: 
-        linear-gradient(0deg, rgb(17, 153, 160) 4%, rgb(102, 102, 101) 82%),
-        linear-gradient(0deg, rgb(21, 172, 180), transparent);
+  linear-gradient(0deg, rgb(40, 26, 230), transparent);
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
   animation-name: out;
@@ -227,13 +195,6 @@ footer {
   to {top: 40px;}
 }
 
-.main-nav ul li a {
-  transition-property: color, transform;
-  transition-duration: .5s;
-  transition-timing-function: ease-in, ease-in-out;
-  display: inline-block;
-}
-
 a:link {
   color:rgb(121, 224, 168);
 }
@@ -241,18 +202,41 @@ a:visited {
   color: #b7d7e8;
 }
 
-/* a:active {
 
-} */
-    
-        /* ---- Header, Navigation End ---- */
+    /* ---- Skills ---- */
 
+.skills img {
+  width: 25%;
+  margin: 10px;
+  transition-property: transform;
+  transition-duration: .6s;
+}
 .skills img:hover:nth-of-type(2n) {
   transform: scale(1.2) rotate(20deg);
 }
 .skills img:hover:nth-of-type(2n +1) {
   transform: scale(1.2) rotate(-20deg);
 }
+
+.skills .express {
+  border-radius: 50%;
+  opacity: 0.5;
+  background-color: #E6E0E0;
+}
+
+
+.skills .react {
+  animation: 4s linear 0s infinite normal none running rotateImg;
+}
+@keyframes rotateImg {
+  0%{
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 /* ---- Projects ---- */
 
@@ -271,20 +255,11 @@ a:visited {
 .project {
   position: relative;
   overflow: hidden;
-  /* padding: 0 50px; */
   margin-top: 15%;
   max-width: 300px;
   display: flex;
   justify-content: center;
   color: white;
-}
-.imgdescription > * {
-  margin: 2% 0;
-  font-size: 1.3em;
-  font-weight: bold;
-}
-.imgdescription > p {
-  color: #E6E0E0;
 }
 
 .project img {
@@ -297,11 +272,12 @@ a:visited {
   transition: transform 1.2s;
 }
 
-.project:hover .imgdescription {
-  opacity: 1;
-  transform: translate(0) rotate(-360deg);
-  transition: transform 1.2s;
+.imgdescription > * {
+  margin: 2% 0;
+  font-size: 1.3em;
+  font-weight: bold;
 }
+
 .imgdescription {
   display: flex;
   flex-direction: column;
@@ -313,8 +289,16 @@ a:visited {
   right: 0;
   padding-top: 20px;
   background-color: rgba(87, 87, 84, 0.5);
-  /* background-color: #EDEDED; */
   transform: translateX(100%);
+}
+.project:hover .imgdescription {
+  opacity: 1;
+  transform: translate(0) rotate(-360deg);
+  transition: transform 1.2s;
+}
+
+.imgdescription > p {
+  color: #E6E0E0;
 }
 
 .imgdescription a {
@@ -325,9 +309,11 @@ a:visited {
   transform: translateY(0);
   transition: transform .5s 1s;
 }
+
 .imgdescription a:first-of-type {
   margin-top: 20px;
 }
+
 
 /* ---- Contact ---- */
 
@@ -336,6 +322,7 @@ a:visited {
   padding: 0 15px;
   margin: 0 10px;
 }
+
 .contact ul li a {
   display: block;
   padding: 5px 15px;
@@ -357,10 +344,6 @@ a:visited {
 }
 
 
-
-
-
-
         /* ---- Footer ---- */
 
 .mobile {
@@ -376,7 +359,6 @@ a:visited {
 }
 
     
-
 /* ================================= 
   Media Queries
 ==================================== */
@@ -387,7 +369,6 @@ a:visited {
   body {
     font-size: 1.3rem;
   }
-
 
   /* -------- Main-Header -------- */
 
@@ -406,13 +387,19 @@ a:visited {
   .dropbtn {
     display: none;
   }
-  /* -------- Main-Header > Nav bar --------- */
+  /* -------- Nav bar --------- */
 
   .main-nav {
     flex:none;
     align-self: center;
   }
 
+  .main-nav ul li a {
+    transition-property: color, transform;
+    transition-duration: .5s;
+    transition-timing-function: ease-in, ease-in-out;
+    display: inline-block;
+  }
   .main-nav ul li a:hover {
     transform: scale(1.2) rotate(1turn);
     color: #77a8a8;
@@ -427,7 +414,6 @@ a:visited {
     display:inline;
     position: static;
   }
-
   .dropdown:hover .dropdown-content {
     animation: none;
   }
@@ -443,9 +429,11 @@ a:visited {
   .about {
     padding: 150px;
   }
+
   .about .bio {
     opacity: 0.3;
   }
+
   .bio p {
     background: none;
   }
@@ -463,6 +451,9 @@ a:visited {
     display: none;
   }
 
+
+  /* ---- Skills ---- */
+
   .skills {
     background: linear-gradient(0deg, #fff, transparent),
                 linear-gradient(0deg, rgb(241, 246, 250), rgb(169, 255, 241), #fff);
@@ -472,32 +463,38 @@ a:visited {
     width: 150px;
     margin: 20px;
   }
+
+
+  /* ---- Projects ---- */
+
   .projects {
     flex-direction: row;
     justify-content: center;
   }
+
   .project {
     padding: 0 5%;
     margin: 0 3%;
     margin-top: unset;
   }
+
   .project img {
     width: unset;
   }
+
   .imgdescription > * {
     font-size: 1.1em;
     font-weight: bold;
   }
 
 
-
-
-
+  /* ---- Footer ---- */
 
   .mobile {
     margin: 40px;
     text-align: center;
   }
+  
   .mobile ul {
     display: none;
   }
