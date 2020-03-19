@@ -100,8 +100,8 @@ a:visited {
   padding: 10px;
 }
 
-.about > p {
-  line-height: 1.6;
+.about .bio > p {
+  line-height: 2;
 }
 
 .about .name {
