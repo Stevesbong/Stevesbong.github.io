@@ -1,6 +1,7 @@
 # [Portfolio Website](https://stevesbong.github.io/)
 
-Website preview: ![alt text](https://github.com/Stevesbong/Stevesbong.github.io/tree/master/img/portfolioscreenshot.png)
+Website preview: 
+![Alt text](https://github.com/Stevesbong/Stevesbong.github.io/tree/master/img/portfolioscreenshot.png?raw=true)
 ### Description
 
 Portfolio website 
