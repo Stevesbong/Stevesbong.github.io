@@ -226,12 +226,13 @@ footer {
 }
 
 .skills .skill {
-  position: relative;
   transition: transform 1s cubic-bezier(.63,-0.71,.21,1.53);
-  transform-style: preserve-3d;
 }
-.skills .skill:hover {
-  transform: rotateY(-180deg);
+.skills .skill:hover:nth-of-type(2n) {
+  transform: scale(1.2) rotate(20deg);
+}
+.skills .skill:hover:nth-of-type(2n + 1) {
+  transform: scale(1.2) rotate(-20deg);
 }
 
 .skills .skill img {
@@ -239,35 +240,9 @@ footer {
   margin: 10px;
 }
 
-.skill-description {
-  background: #a2b9d1;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex; /* For centering text inside .photo-overlay */
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.front,
 .back {
-  backface-visibility: hidden;
+  display: none;
 }
-
-.back {
-  transform: rotateY(180deg);
-}
-
-/* .skills .skill:hover:nth-of-type(2n) {
-  transform: scale(1.2) rotate(20deg);
-}
-.skills .skill:hover:nth-of-type(2n +1) {
-  transform: scale(1.2) rotate(-20deg);
-} */
 
 .skill .react {
   animation: 4s linear 0s infinite normal none running rotateImg;
@@ -499,9 +474,41 @@ footer {
     height: 195px;
   }
 
+  .skills .skill {
+    position: relative;
+    transition: transform 1s cubic-bezier(.63,-0.71,.21,1.53);
+    transform-style: preserve-3d;
+  }
+  .skills-heading .skills .skill:hover {
+    transform: rotateY(-180deg);
+  }
+  
   .skills .skill img {
     width: 150px;
     margin: 20px;
+  }
+  
+  .skill-description {
+    background: #a2b9d1;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex; /* For centering text inside .photo-overlay */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .front,
+  .back {
+    backface-visibility: hidden;
+  }
+  
+  .back {
+    transform: rotateY(180deg);
   }
 
 
