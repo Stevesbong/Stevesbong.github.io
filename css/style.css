@@ -123,12 +123,6 @@ a:visited {
   flex-wrap: wrap;
 }
 
-.skills .express {
-  border-radius: 50%;
-  opacity: 0.5;
-  background-color: #E6E0E0;
-}
-
 
     /* ---- Projects ---- */
 
@@ -227,20 +221,55 @@ footer {
 
     /* ---- Skills ---- */
 
-.skills img {
-  width: 25%;
-  margin: 10px;
-  transition-property: transform;
-  transition-duration: .6s;
-}
-.skills img:hover:nth-of-type(2n) {
-  transform: scale(1.2) rotate(20deg);
-}
-.skills img:hover:nth-of-type(2n +1) {
-  transform: scale(1.2) rotate(-20deg);
+.skills {
+  perspective: 600px;
 }
 
-.skills .react {
+.skills .skill {
+  position: relative;
+  transition: transform 1s cubic-bezier(.63,-0.71,.21,1.53);
+  transform-style: preserve-3d;
+}
+.skills .skill:hover {
+  transform: rotateY(-180deg);
+}
+
+.skills .skill img {
+  width: 150px;
+  margin: 10px;
+}
+
+.skill-description {
+  background: #a2b9d1;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex; /* For centering text inside .photo-overlay */
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+/* .skills .skill:hover:nth-of-type(2n) {
+  transform: scale(1.2) rotate(20deg);
+}
+.skills .skill:hover:nth-of-type(2n +1) {
+  transform: scale(1.2) rotate(-20deg);
+} */
+
+.skill .react {
   animation: 4s linear 0s infinite normal none running rotateImg;
 }
 @keyframes rotateImg {
@@ -466,7 +495,11 @@ footer {
     padding: 0 200px;
   }
   
-  .skills img {
+  .skill {
+    height: 195px;
+  }
+
+  .skills .skill img {
     width: 150px;
     margin: 20px;
   }
