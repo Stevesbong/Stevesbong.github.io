@@ -16,3 +16,5 @@ Created a Portfolio Website with HTML and CSS for resume.
 #### To Do List
 1. Put more project on the portfolio
 2. Add UX feature with JavaScript
+3. Add Sass pre-processor
+4. Add JavaScript later
