@@ -348,6 +348,20 @@ footer {
   background-color: rgb(57, 112, 112);
 }
 
+.contact h3 {
+  margin-top: 100px;
+  font-size: 1.7em;
+  font-weight: 300;
+  color: black;
+}
+
+.contact a:link {
+  color: black;
+}
+.contact a:hover {
+  color: #0f65ef;
+}
+
 
         /* ---- Footer ---- */
 
