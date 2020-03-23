@@ -1,0 +1,14 @@
+@mixin flexlayout ($disp: flex,               // display
+                $dirct: null,           // flex-direction
+                $justcont: null,        // justify-content
+                $alignitms: null,       // align-items
+                $flx: null,             // flex
+                $alignslf: null         // align-self
+                ) {
+    display: $disp;
+    flex-direction: $dirct;
+    justify-content: $justcont;
+    align-items: $alignitms;
+    flex: $flx;
+    align-self: $alignslf;
+}

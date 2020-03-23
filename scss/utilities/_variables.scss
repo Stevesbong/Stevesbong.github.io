@@ -1,0 +1,59 @@
+$main-color: #E6E0E0;
+$nav-botton: #076b70;
+
+
+$color-primary: #58e1c1;
+$color-default: #51ddfc;
+$color-error: #e4757a;
+$color-info: #927bc1;
+$color-success: #63cc82;
+$color-warning: #fd7856;
+$col-1: #deb2ee;
+$col-2: #7ee6fd;
+$col-3: #88d9a0;
+$col-4: #4da2bb;
+$col-5: #ec9fa3;
+$col-6: #fd9f85;
+$col-7: #80e8d1;
+
+
+// Social color
+
+$linkedin-color: #0077b5;
+$google-color: #dd4b39;
+$github-color: #24292E;
+
+// media query
+
+$breakpoints: (
+    'sm': 576px,
+    'med': 768px,
+    'lg': 992px,
+);
+
+@mixin mq($break) {
+    $value: map-get( $breakpoints, $break );
+    @media ( min-width: $value ) {
+        @content;
+    }
+}
+
+// @mixin mq($break) {
+//     $value: map-get($breakpoints, $break );
+//     $sm: map-get($breakpoints, 'sm' );
+
+//     @if $value <= $sm {
+//         @media (min-width: $value) {
+//         color: red;
+//         }
+//     }
+//     @else {
+//       @media (min-width: $value) {
+//         color: blue;
+//       }
+//     }
+// }
+// .nav__link {
+//     @include display(block, 10px 5px);
+//     @include mq(lg);
+//   }
