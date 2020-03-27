@@ -1,0 +1,92 @@
+ul,
+.dorpdown-content {
+    padding: 0;
+}
+
+.main-header {
+    @include flexlayout($justcont: space-between);
+    background-color: #36486b;
+}
+
+.header-h1 {
+    flex: 3;
+    text-align: center;
+    transition: transform .5s;
+
+    &-second {
+        display: none;
+    }
+
+    &:hover {
+        transform: rotate(10deg);
+        transform-origin: top left;
+    }
+}
+
+.main-nav {
+    flex: 1;
+    text-align: center;
+
+    & li {
+        padding: 15px 0;
+        font-size: 1.25em;
+    }
+}
+
+// dropdown > dropbtn
+// dropdown > dropdown-content 
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+
+    & .dropbtn {
+        background-color: rgb(7, 107, 112);
+        padding: 3px 15px;
+        font-size: 2em;
+        border: none;
+        opacity: 0.8;
+
+        &::before {
+            content: "\039e";
+            color: #ddd;
+        }
+    }
+
+    &-content {
+        display: none;
+        position: absolute;
+        margin: 0;
+        background-color: #f1f1f1 transparent;
+        z-index: 1;
+        width: 100%;
+
+        & li {
+            display: block;
+            margin: 5px 0;
+            border-radius: 20px;
+            background: linear-gradient(0deg, rgb(40, 26, 230), transparent);
+        }
+    }
+
+    &:hover .dorpdown-content {
+        display: block;
+        animation-name: out;
+        animation-duration: 1.3s;
+    }
+    @keyframes out {
+        from { top: 0; }
+        to { top: 40px; }
+    }
+}
+
+a {
+    text-decoration: none;
+    &:link {
+        color: rgb(121, 224, 168);
+    }
+    &:visited {
+        color: #b7d7e8;
+    }
+}

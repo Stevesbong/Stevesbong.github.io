@@ -1,0 +1,14 @@
+footer {
+    background-color: #E6E0E0;
+    color: black;
+}
+
+.mobile {
+    @include flexlayout ($dirct: row, $justcont: center);
+    margin: 0 20px;
+}
+
+.copyright {
+    align-self: center;
+    flex: 2;
+}

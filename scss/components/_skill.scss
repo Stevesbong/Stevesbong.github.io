@@ -1,0 +1,44 @@
+.skills-heading {
+    flex: 1;
+    text-align: center;
+    background-color: white;
+    & h1 {
+        margin: 100px 0;
+    }
+}
+
+.skills {
+    @include flexlayout( $justcont: center, $flxwrap: wrap);
+    perspective: 600px;
+
+    & .skill {
+        transition: transform 1s cubic-bezier(.63,-0.71,.21,1.53);
+
+        &:hover:nth-of-type(2n) {
+            transform: scale(1.2) rotate(20deg);
+        }
+        &:hover:nth-of-type(2n + 1) {
+            transform: scale(1.2) rotate(-20deg);
+        }
+
+        & img {
+            width: 150px;
+            margin: 10px;
+        }
+    }
+    & .react {
+        animation: 4s linear 0s infinite normal none running rotateImg;
+    }
+    @keyframes rotateImg {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+.back {
+    display: none;
+}

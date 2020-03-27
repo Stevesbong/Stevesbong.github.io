@@ -1,0 +1,44 @@
+.contact {
+    margin: 100px 0;
+
+    & ul li {
+        display: inline-block;
+        padding: 0 15px;
+        margin: 0 10px;
+
+        & a {
+            display: block;
+            padding: 5px 15px;
+            transition: transform .5s;
+
+            &:hover {
+                opacity: 0.7;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    & .contact-linkedin {
+        background: #3B5998;
+    }
+    & .contact-github {
+        background: black;
+    }
+    & .contact-email {
+        background: rgb(57, 112, 112);
+    }
+
+    & h3 {
+        margin-top: 100px;
+        font-size: 1.7em;
+        font-weight: 300;
+        color: black;
+    }
+
+    & a:link {
+        color: black;
+    }
+    & a:hover {
+        color: #0f65ef;
+    }
+}

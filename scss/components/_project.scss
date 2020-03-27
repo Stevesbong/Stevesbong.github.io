@@ -1,0 +1,73 @@
+.projects-header {
+    margin: 100px 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.projects {
+    @include flexlayout ($dirct: column, $alignitms: center);
+    margin: 0 5%;
+}
+
+.project {
+    @include flexlayout ($justcont: center);
+    position: relative;
+    overflow: hidden;
+    margin-top: 15%;
+    width: 300px;
+    color: white;
+
+    & img {
+        transform-origin: 0 0;
+        height: 400px;
+        width: 80%;
+    }
+
+    &:hover img {
+        transform: scale(1.2);
+        transition: transform 1.2s;
+    }
+
+    &:hover .imgdescription {
+        opacity: 1;
+        transform: translate(0) rotate(-360deg);
+        transition: transform 1.2s;
+    }
+
+    &:hover .imgdescription a {
+        transform: translateY(0);
+        transition: transform .5s 1s;
+    }
+}
+
+.imgdescription {
+    @include flexlayout ($dirct: column);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 20px;
+    background-color: rgba(87, 87, 84, 0.5);
+    transform: translateX(100%);
+
+    & a {
+        transform: translateY(800%);
+        padding: 10px 0;
+
+        &:first-of-type {
+            margin-top: 20px;
+        }
+    }
+}
+
+.imgdescription > * {
+    margin: 2% 0;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.imgdescription p {
+    color: #E6E0E0;
+}

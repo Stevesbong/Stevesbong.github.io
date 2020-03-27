@@ -37,23 +37,3 @@ $breakpoints: (
         @content;
     }
 }
-
-// @mixin mq($break) {
-//     $value: map-get($breakpoints, $break );
-//     $sm: map-get($breakpoints, 'sm' );
-
-//     @if $value <= $sm {
-//         @media (min-width: $value) {
-//         color: red;
-//         }
-//     }
-//     @else {
-//       @media (min-width: $value) {
-//         color: blue;
-//       }
-//     }
-// }
-// .nav__link {
-//     @include display(block, 10px 5px);
-//     @include mq(lg);
-//   }

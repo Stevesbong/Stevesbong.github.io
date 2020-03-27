@@ -1,0 +1,214 @@
+body {
+    @include mq(med) {
+        font-size: 1.3rem;
+    }
+}
+
+/* ============================================= */
+/*              Header                           */
+/* ============================================= */
+
+.main-header {
+    @include mq(med) {
+        @include flexlayout ($justcont: space-between);
+        padding: 0 30px;
+    }
+}
+
+.header-h1-second {
+    @include mq(med) {
+        display: block;
+        text-align: center;
+    }
+}
+
+.header-h1,
+.dropbtn,
+.profileimg {
+    @include mq(med) {
+        display: none;
+    }
+}
+
+.main-nav {
+    @include mq(med) {
+        flex: none;
+        align-self: center;
+    }
+}
+
+.main-nav ul li a {
+    @include mq(med) {
+        display: inline-block;
+        transition: color .5s ease-in, transform .5s ease-in-out;
+        &:hover {
+            transform: scale(1.2) rotate(1turn);
+            color: #77a8a8;
+        }
+    }
+}
+
+.dropdown {
+    @include mq(med) {
+        margin: 0;
+        display: inline;
+        position: static;
+        
+        &-content {
+            display:inline;
+            position: static;
+
+            & li {
+                display: inline;
+                background: none;
+                padding: 0 10px;
+            }
+        }
+
+        &:hover .dropdown-content {
+            animation: none;
+        }
+    }
+}
+
+/* ============================================= */
+/*                  About                        */
+/* ============================================= */
+
+.about {
+    @include mq(med) {
+        padding: 150px;
+
+        &:hover .bio {
+            background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(0, 0, 0, 0.7) 30%,
+            rgba(0, 0, 0, 0.8) 70%,
+            rgba(255, 255, 255, 0) 100%);
+            border-radius: 100px;
+            background-position: 0 0;
+            opacity: 1;
+        }
+    }
+}
+
+.about .bio {
+    opacity: 0.3;
+
+    & p {
+        background: none;
+    }
+}
+
+/* ============================================= */
+/*                  Skills                       */
+/* ============================================= */
+
+.skills {
+    @include mq(med) {
+        background: linear-gradient(0deg, #fff, transparent),
+                    linear-gradient(0deg, rgb(241, 246, 250), rgb(169, 255, 241), #fff);
+        padding: 0 200px;
+
+        & .skill {
+            position: relative;
+            transition: transform 1s cubic-bezier(.63,-0.71,.21,1.53);
+            transform-style: preserve-3d;
+
+            & img {
+                width: 150px;
+                margin: 20px;
+            }
+        }
+    }
+}
+
+.skills-heading .skills .skill:hover {
+    @include mq(med) {
+        transform: rotateY(-180deg);
+    }
+}
+
+.skill {
+    @include mq(med) {
+        height: 195px;
+
+        &-description {
+            background: #a2b9d1;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            @include flexlayout($dirct: column, $justcont: center, $alignitms: center)
+        }
+    }
+}
+
+.front {
+    @include mq(med) {
+        backface-visibility: hidden;
+    }
+}
+
+.back {
+    @extend .front;
+    transform: rotateY(180deg);
+}
+
+/* ============================================= */
+/*                  Projects                     */
+/* ============================================= */
+
+.projects {
+    @include mq(med) {
+        @include flexlayout($dirct: row, $justcont: center);
+    }
+}
+
+.project {
+    @include mq(med) {
+        margin: 0 3%;
+    }
+}
+
+.project img {
+    @include mq(med) {
+        width: 100%;
+    }
+}
+
+.imgdescription > * {
+    @include mq(med) {
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+}
+
+.imgdescription a {
+    @include mq(med) {
+        width: 70%;
+        align-self: center;
+        &:hover {
+            opacity: 0.5;
+            background-color: black;
+            border-radius: 10px;
+        }
+    }
+}
+
+/* ============================================= */
+/*                  Footer                       */
+/* ============================================= */
+
+.mobile {
+    @include mq(med) {
+        margin: 40px;
+        text-align: center;
+
+        & ul {
+            display: none;
+        }
+    }
+}

@@ -1,5 +1,6 @@
-@mixin flexlayout ($disp: flex,               // display
+@mixin flexlayout ($disp: flex,         // display
                 $dirct: null,           // flex-direction
+                $flxwrap: null,         // flex-wrap
                 $justcont: null,        // justify-content
                 $alignitms: null,       // align-items
                 $flx: null,             // flex
@@ -7,8 +8,36 @@
                 ) {
     display: $disp;
     flex-direction: $dirct;
+    flex-wrap: $flxwrap;
     justify-content: $justcont;
     align-items: $alignitms;
     flex: $flx;
     align-self: $alignslf;
 }
+
+@mixin mq($break) {
+    $value: map-get( $breakpoints, $break );
+    @media ( min-width: $value ) {
+        @content;
+    }
+}
+
+// @mixin mq($break) {
+//     $value: map-get($breakpoints, $break );
+//     $sm: map-get($breakpoints, 'sm' );
+
+//     @if $value <= $sm {
+//         @media (min-width: $value) {
+//         color: red;
+//         }
+//     }
+//     @else {
+//       @media (min-width: $value) {
+//         color: blue;
+//       }
+//     }
+// }
+// .nav__link {
+//     @include display(block, 10px 5px);
+//     @include mq(lg);
+//   }
