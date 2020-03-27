@@ -45,7 +45,7 @@
     bottom: 0;
     left: 0;
     padding-top: 20px;
-    background-color: rgba(87, 87, 84, 0.5);
+    background: rgba($color-black, 0.5);
     transform: translateX(100%);
 
     & a {
@@ -60,7 +60,7 @@
 
         &:hover {
             opacity: 0.5;
-            background-color: black;
+            background-color: $color-black;
             border-radius: 10px;
         }
     }
@@ -73,5 +73,5 @@
 }
 
 .imgdescription p {
-    color: #E6E0E0;
+    color: $main-color;
 }

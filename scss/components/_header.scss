@@ -5,7 +5,7 @@ ul,
 
 .main-header {
     @include flexlayout($justcont: space-between);
-    background-color: #36486b;
+    background-color: $nav-bar;
     padding: 10px 0;
 }
 
@@ -43,7 +43,7 @@ ul,
     margin: auto;
 
     & .dropbtn {
-        background-color: rgb(7, 107, 112);
+        background-color: $nav-botton;
         padding: 3px 15px;
         font-size: 2em;
         border: none;
@@ -51,7 +51,7 @@ ul,
 
         &::before {
             content: "\039e";
-            color: #ddd;
+            color: $main-color;
         }
     }
 
@@ -67,7 +67,7 @@ ul,
             display: block;
             margin: 5px 0;
             border-radius: 20px;
-            background: linear-gradient(0deg, rgb(40, 26, 230), transparent);
+            background: linear-gradient(0deg, #0f65ef, transparent);
         }
     }
 
@@ -79,15 +79,5 @@ ul,
     @keyframes out {
         from { top: 0; }
         to { top: 40px; }
-    }
-}
-
-a {
-    text-decoration: none;
-    &:link {
-        color: rgb(121, 224, 168);
-    }
-    &:visited {
-        color: #b7d7e8;
     }
 }
