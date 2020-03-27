@@ -1,8 +1,4 @@
-.projects-header {
-    margin: 100px 0;
-    width: 90%;
-    margin: 0 auto;
-}
+
 
 .projects {
     @include flexlayout ($dirct: column, $alignitms: center);
@@ -13,9 +9,9 @@
     @include flexlayout ($justcont: center);
     position: relative;
     overflow: hidden;
-    margin-top: 15%;
-    width: 300px;
+    width: 80%;
     color: white;
+    margin: 15% 0;
 
     & img {
         transform-origin: 0 0;
@@ -36,7 +32,7 @@
 
     &:hover .imgdescription a {
         transform: translateY(0);
-        transition: transform .5s 1s;
+        transition: transform .5s 1.5s;
     }
 }
 
@@ -55,9 +51,17 @@
     & a {
         transform: translateY(800%);
         padding: 10px 0;
+        width: 70%;
+        align-self: center;
 
         &:first-of-type {
             margin-top: 20px;
+        }
+
+        &:hover {
+            opacity: 0.5;
+            background-color: black;
+            border-radius: 10px;
         }
     }
 }

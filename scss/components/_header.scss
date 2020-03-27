@@ -6,6 +6,7 @@ ul,
 .main-header {
     @include flexlayout($justcont: space-between);
     background-color: #36486b;
+    padding: 10px 0;
 }
 
 .header-h1 {
@@ -70,7 +71,7 @@ ul,
         }
     }
 
-    &:hover .dorpdown-content {
+    &:hover .dropdown-content {
         display: block;
         animation-name: out;
         animation-duration: 1.3s;
