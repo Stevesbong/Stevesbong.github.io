@@ -276,6 +276,7 @@ footer {
   overflow: hidden;
   margin-top: 15%;
   max-width: 300px;
+  width:300px;
   display: flex;
   justify-content: center;
   color: white;
@@ -284,7 +285,7 @@ footer {
 .project img {
   transform-origin: 0 0;
   height: 400px;
-  width: 80%;
+  width: 100%;
 }
 .project:hover img {
   transform: scale(1.2);
@@ -311,12 +312,12 @@ footer {
 }
 
 .imgdescription a {
-  transform: translateY(600%);
+  transform: translateY(800%);
   padding: 10px 0;
 }
 .project:hover .imgdescription a {
   transform: translateY(0);
-  transition: transform .5s 1s;
+  transition: transform .5s 1.2s;
 }
 
 
