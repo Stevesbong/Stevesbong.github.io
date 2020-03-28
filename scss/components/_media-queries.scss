@@ -121,12 +121,8 @@ body {
 /* ============================================= */
 
 .skills-header h1 {
-    @include mq(med) {
-        margin-bottom: 50px;
-    }
-
     @include mq(lg) {
-        margin: 200px 0 50px 0;
+        margin: 200px 0 0 0;
     }
 }
 
@@ -188,7 +184,7 @@ body {
 
 .projects-header h1 {
     @include mq(lg) {
-        margin: 200px 0 50px 0;
+        margin: 200px 0 0 0;
     }
 }
 
@@ -232,7 +228,7 @@ body {
 .contact-header {
     @include mq(lg) {
         & h1 {
-            margin: 200px 0 100px 0;
+            margin: 200px 0 0 0;
         }
 
         & h3 {

@@ -386,7 +386,6 @@ body {
 .skills-header h1,
 .projects-header h1,
 .contact-header h1 {
-  margin-bottom: 50px;
   color: #222222;
 }
 
@@ -410,6 +409,13 @@ a:hover {
 }
 a:active {
   color: #80e8d1;
+}
+
+hr.line {
+  margin-bottom: 50px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 /* ============================================= */
@@ -803,14 +809,9 @@ footer {
 /* ============================================= */
 /*                  Skills                       */
 /* ============================================= */
-@media (min-width: 768px) {
-  .skills-header h1 {
-    margin-bottom: 50px;
-  }
-}
 @media (min-width: 992px) {
   .skills-header h1 {
-    margin: 200px 0 50px 0;
+    margin: 200px 0 0 0;
   }
 }
 
@@ -869,7 +870,7 @@ footer {
 /* ============================================= */
 @media (min-width: 992px) {
   .projects-header h1 {
-    margin: 200px 0 50px 0;
+    margin: 200px 0 0 0;
   }
 }
 
@@ -917,7 +918,7 @@ footer {
 /* ============================================= */
 @media (min-width: 992px) {
   .contact-header h1 {
-    margin: 200px 0 100px 0;
+    margin: 200px 0 0 0;
   }
   .contact-header h3 {
     margin-top: 60px;
