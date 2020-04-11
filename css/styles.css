@@ -6,6 +6,12 @@
 /* Utilities Imports */
 /* ============================================= */
 /* ============================================= */
+/* Default Color */
+/* ============================================= */
+/* ============================================= */
+/* Media Query Points */
+/* ============================================= */
+/* ============================================= */
 /* Base Imports */
 /* ============================================= */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -617,7 +623,10 @@ ul,
   align-self: center;
 }
 .imgdescription a:first-of-type {
-  margin-top: 20px;
+  margin-top: auto;
+}
+.imgdescription a:last-of-type {
+  margin-bottom: 30px;
 }
 .imgdescription a:hover {
   opacity: 0.5;

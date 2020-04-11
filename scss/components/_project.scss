@@ -55,7 +55,10 @@
         align-self: center;
 
         &:first-of-type {
-            margin-top: 20px;
+            margin-top: auto;
+        }
+        &:last-of-type {
+            margin-bottom: 30px;
         }
 
         &:hover {
