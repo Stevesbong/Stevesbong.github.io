@@ -188,32 +188,6 @@ body {
     }
 }
 
-.projects {
-    @include mq(med) {
-        @include flexlayout($dirct: row, $flxwrap: wrap, $justcont: center);
-    }
-    @include mq(lg) {
-        margin: 0;
-    }
-}
-
-.project {
-    @include mq(med) {
-        margin: 50px 30px;
-        width: 40%;
-    }
-
-    @include mq(lg) {
-        width: 250px;
-    }
-}
-
-.project img {
-    @include mq(med) {
-        width: 100%;
-    }
-}
-
 .imgdescription > * {
     @include mq(med) {
         font-size: 1.1em;
