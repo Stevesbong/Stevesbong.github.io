@@ -188,6 +188,11 @@ body {
     }
 }
 
+.project {
+    border: 2px solid #d6d6d6;
+    border-radius: 10px;
+}
+
 .imgdescription > * {
     @include mq(med) {
         font-size: 1.1em;

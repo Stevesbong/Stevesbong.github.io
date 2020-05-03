@@ -571,7 +571,7 @@ ul,
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1em;
+  grid-gap: 1.4em;
   grid-row-gap: 2em;
   width: 90%;
   margin: 1.2em auto;
@@ -881,6 +881,11 @@ footer {
   .projects-header h1 {
     margin: 200px 0 0 0;
   }
+}
+
+.project {
+  border: 2px solid #d6d6d6;
+  border-radius: 10px;
 }
 
 @media (min-width: 768px) {
