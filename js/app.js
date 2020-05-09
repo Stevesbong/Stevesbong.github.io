@@ -9,7 +9,9 @@
 //     })
 // })
 
+// GET ALL SECTION CLASS
 const sections = document.querySelectorAll('.section');
+// GET ALL NAV LINK
 const navbarLinks = document.querySelectorAll('.link-list a');
 
 // ACTIVE EACH NAVBAR LINK WHEN YOU SCROLL DOWN
@@ -36,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             navbar.classList.remove('sticky');
         }
-        
+
     });
 }, false);
 
