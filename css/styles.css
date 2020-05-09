@@ -33,6 +33,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -382,7 +383,7 @@ html {
 }
 
 body {
-  font-family: "Merriweather", Arial, sans-serif;
+  font-family: "Merriweather San", Arial, sans-serif;
   color: #E6E0E0;
   min-height: 100vh;
   max-width: 2000px;

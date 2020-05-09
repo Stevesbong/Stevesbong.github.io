@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -10,7 +12,7 @@ html {
 }
 
 body {
-    font-family: 'Merriweather', Arial, sans-serif;
+    font-family: 'Merriweather San', Arial, sans-serif;
     color: $main-color;
     min-height: 100vh;
     max-width: 2000px;

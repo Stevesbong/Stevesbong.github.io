@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(current !== currentActiveLink) {
             removeAcitveClass();
             currentActiveLink = current;
-            addActiveClass(current)
+            addActiveClass(current);
         }
 
         // MAKING STICKY NAVBAR WHEN SCROLL
@@ -36,13 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             navbar.classList.remove('sticky');
         }
-
-    })
-}, false)
+        
+    });
+}, false);
 
 // REMOVE ACTIVE CLASS
 function removeAcitveClass() {
-    navbarLinks.forEach( link => link.classList.remove('active') )
+    navbarLinks.forEach( link => link.classList.remove('active') );
 }
 
 // ADD ACTIVE CLASS
