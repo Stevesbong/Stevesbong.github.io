@@ -12,7 +12,8 @@ body {
     font-family: 'Merriweather', Arial, sans-serif;
     color: $main-color;
     min-height: 100vh;
-    max-width: 1800px;
+    max-width: 2000px;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
