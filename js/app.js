@@ -1,56 +1,51 @@
-console.log('app.js working')
+// console.log('app.js working')
 
-const navLink = document.querySelectorAll(".link-list");
-console.log(navLink);
+// const navLink = document.querySelectorAll(".link-list");
+// console.log(navLink);
 
-navLink.forEach( navList => {
-    navList.addEventListener('click', (e) => {
-        console.log('clicked', e.target)
-    })
-})
-
-// MAKING STICKY NAVBAR WHEN SCROLL
-const navbar = document.getElementById('top');
-const sticky = navbar.offsetTop;
-
-window.onscroll = () => {
-    if(window.pageYOffset > sticky) {
-        navbar.classList.add('sticky');
-    } else {
-        navbar.classList.remove('sticky');
-    }
-}
+// navLink.forEach( navList => {
+//     navList.addEventListener('click', (e) => {
+//         console.log('clicked', e.target)
+//     })
+// })
 
 const sections = document.querySelectorAll('.section');
-    const navbarLinks = document.querySelectorAll('.link-list a');
+const navbarLinks = document.querySelectorAll('.link-list a');
+
+// ACTIVE EACH NAVBAR LINK WHEN YOU SCROLL DOWN
 document.addEventListener('DOMContentLoaded', () => {
     
-
-    console.log('hi');
-    console.log(sections);
-    console.log(navbarLinks);
-    console.log([...sections].reverse());
-    console.log([...sections]);
-    
-    let currentActive = 0;
+    let currentActiveLink = 0;
     window.addEventListener('scroll', ()=> {
-        const current = sections.length - [...sections].reverse().findIndex( section => window.scrollY > section.offsetTop - 200 ) -1;
-        console.log(current)
-        console.log(navbarLinks[current])
-        if(current !== currentActive) {
-            removeAcitve();
-            currentActive = current;
-            addActive(current)
 
+        const current = sections.length - [...sections]
+            .reverse()
+            .findIndex( section => window.scrollY > section.offsetTop - 400 ) - 1;
+        if(current !== currentActiveLink) {
+            removeAcitveClass();
+            currentActiveLink = current;
+            addActiveClass(current)
+        }
+
+        // MAKING STICKY NAVBAR WHEN SCROLL
+        const navbar = document.getElementById('nav');
+        const sticky = navbar.offsetTop;
+
+        if(window.pageYOffset > sticky) {
+            navbar.classList.add('sticky');
+        } else {
+            navbar.classList.remove('sticky');
         }
 
     })
 }, false)
 
-function removeAcitve() {
+// REMOVE ACTIVE CLASS
+function removeAcitveClass() {
     navbarLinks.forEach( link => link.classList.remove('active') )
 }
 
-function addActive(i) {
+// ADD ACTIVE CLASS
+function addActiveClass(i) {
     navbarLinks[i].classList.add('active');
 }
