@@ -17,6 +17,6 @@ Created a Portfolio Website with HTML and CSS for resume.
 
 
 #### To Do List
-1. Put more project on the portfolio    <code>Working on . . . 
-2. Add UX feature with JavaScript       <code>Adding . . .
-3. Add Sass pre-processor               <code>Done
+- [ ] Put more project on the portfolio    
+- [x] Add UX feature with JavaScript       
+- [x] Add Sass pre-processor
