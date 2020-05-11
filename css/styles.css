@@ -919,8 +919,8 @@ footer {
 }
 
 @media (min-width: 768px) {
-  .imgdescription > * {
-    font-size: 1.1em;
+  .imgdescription > p {
+    font-size: 0.9em;
     font-weight: bold;
   }
 }

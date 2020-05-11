@@ -193,9 +193,9 @@ body {
     border-radius: 10px;
 }
 
-.imgdescription > * {
+.imgdescription > p {
     @include mq(med) {
-        font-size: 1.1em;
+        font-size: 0.9em;
         font-weight: bold;
     }
 }
