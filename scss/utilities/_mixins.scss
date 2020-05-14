@@ -21,3 +21,15 @@
         @content;
     }
 }
+
+// CSS CALC() FUNCTION TO PERFORM CALCULATIONS
+
+@mixin calc($property, $expression) {
+    // PREFIX BROWSER SUPPORTED BY FIREFOX
+    #{$property}: -moz-calc(#{$expression});
+
+    // PREFIX BROWSER SUPPORTED BY GOOGLE CHROME, SAFARI OPERA
+    #{$property}: -webkit-calc(#{$expression});
+    
+	#{$property}: calc(#{$expression});
+}
