@@ -46,15 +46,20 @@ body {
 a {
     text-decoration: none;
     color: $color-black;
+    
+    // pseudo-class targets unvisited links – or links that have not been clicked by the user.
     &:link {
         color: $color-neutral-light;
     }
+    // links that have been visited (or clicked).
     &:visited {
         color: $color-red-lightest;
     }
+    // the user hovers over it with a pointing device such as a mouse
     &:hover {
         color: $anchor-hover;
     }
+    // an element (such as a button) that is being activated by the user
     &:active {
         color: $anchor-active;
     }
