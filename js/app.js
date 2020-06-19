@@ -1,13 +1,3 @@
-// console.log('app.js working')
-
-// const navLink = document.querySelectorAll(".link-list");
-// console.log(navLink);
-
-// navLink.forEach( navList => {
-//     navList.addEventListener('click', (e) => {
-//         console.log('clicked', e.target)
-//     })
-// })
 
 // GET ALL SECTION CLASS
 const sections = document.querySelectorAll('.section');
@@ -51,3 +41,15 @@ function removeAcitveClass() {
 function addActiveClass(i) {
     navbarLinks[i].classList.add('active');
 }
+
+
+// working on it
+document.querySelector('.projects').addEventListener('mouseover', e => {
+    const val = e.target
+    if(e.target.hasAttribute('data-site')) {
+        console.log('yes')
+        console.log(e.target.getAttribute('data-site'))
+    }
+
+
+})
