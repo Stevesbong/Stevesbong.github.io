@@ -44,12 +44,15 @@ function addActiveClass(i) {
 
 
 // working on it
-document.querySelector('.projects').addEventListener('mouseover', e => {
+document.querySelector('.projects').addEventListener('click', e => {
     const val = e.target
+    const li = document.createElement('li')
+    li.textContent= 'working on feature'
+    li.className = 'working'
     if(e.target.hasAttribute('data-site')) {
         console.log('yes')
         console.log(e.target.getAttribute('data-site'))
+        console.log(e.target.parentElement)
+        e.target.parentElement.insertBefore(li, e.target)
     }
-
-
 })
