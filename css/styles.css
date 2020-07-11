@@ -685,6 +685,11 @@ ul,
   transition: transform 0.5s;
 }
 
+a.resume {
+  color: #4da2bb;
+  font-size: 1.5em;
+}
+
 .contact-header {
   margin-bottom: 15%;
 }
